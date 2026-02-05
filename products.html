@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products • Inventory Pro</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" class="logo-img">
+        <span class="logo-text">Inventory Pro</span>
+    </div>
+
+    <a href="index.html"><span class="material-icons">dashboard</span> Dashboard</a>
+    <a href="products.html"><span class="material-icons">inventory_2</span> Products</a>
+    <a href="stock.html"><span class="material-icons">store</span> Stock</a>
+    <a href="sales.html"><span class="material-icons">point_of_sale</span> Sales</a>
+    <a href="reports.html"><span class="material-icons">bar_chart</span> Reports</a>
+    <a href="help.html"><span class="material-icons">help</span> Help</a>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <h1>Product Management</h1>
+
+    <!-- SEARCH + SORT BAR -->
+    <div class="top-bar">
+        <input type="text" id="searchProducts" class="search-input" placeholder="Search products...">
+        
+        <select id="sortProducts" class="sort-select">
+            <option value="name_asc">Name A→Z</option>
+            <option value="name_desc">Name Z→A</option>
+            <option value="price_asc">Price Low→High</option>
+            <option value="price_desc">Price High→Low</option>
+            <option value="stock_asc">Stock Low→High</option>
+            <option value="stock_desc">Stock High→Low</option>
+        </select>
+    </div>
+
+    <!-- ADD PRODUCT -->
+    <div class="card">
+        <h3>Add New Product</h3>
+
+        <input id="pname" placeholder="Product name">
+        <input id="pcat" placeholder="Category">
+        <input id="pprice" type="number" placeholder="Price">
+        <input id="pstock" type="number" placeholder="Initial Stock">
+
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- UPDATE STOCK -->
+    <div class="card">
+        <h3>Update Stock</h3>
+
+        <select id="updateProduct"></select>
+        <input id="updateQty" type="number" placeholder="Add quantity">
+
+        <button onclick="updateStock()">Update Stock</button>
+    </div>
+
+    <!-- PRODUCT LIST -->
+    <div class="card">
+        <h3>Product List</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="productTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/product.js"></script>
+
+</body>
+</html>

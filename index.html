@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard • Inventory Pro</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" class="logo-img">
+        <span class="logo-text">Inventory Pro</span>
+    </div>
+
+    <a href="index.html"><span class="material-icons">dashboard</span> Dashboard</a>
+    <a href="products.html"><span class="material-icons">inventory_2</span> Products</a>
+    <a href="stock.html"><span class="material-icons">store</span> Stock</a>
+    <a href="sales.html"><span class="material-icons">point_of_sale</span> Sales</a>
+    <a href="reports.html"><span class="material-icons">bar_chart</span> Reports</a>
+    <a href="help.html"><span class="material-icons">help</span> Help</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+    <h1>Dashboard Overview</h1>
+
+   
+
+    <!-- Dashboard Cards -->
+    <div class="card">
+        <h3>Total Products</h3>
+        <div id="totalProducts" style="font-size: 26px; font-weight: 600;">0</div>
+    </div>
+
+    <div class="card">
+        <h3>Total Stock</h3>
+        <div id="totalStock" style="font-size: 26px; font-weight: 600;">0</div>
+    </div>
+
+    <div class="card">
+        <h3>Today's Sales</h3>
+        <div id="todaySales" style="font-size: 26px; font-weight: 600;">₹0</div>
+    </div>
+
+    <div class="card">
+        <h2>Monthly Revenue</h2>
+        <p id="monthlyRevenue">₹0</p>
+    </div>
+
+
+    <!-- Tips -->
+    <div class="card">
+        <h3>Important Tips</h3>
+        <div class="info-box">✓ Update stock regularly to avoid shortages.</div>
+        <div class="warn-box">⚠ Products with stock < 10 units will show alerts.</div>
+    </div>
+
+</div>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/app.js"></script>
+
+</body>
+</html>

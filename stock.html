@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock • Inventory Pro</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" class="logo-img">
+        <span class="logo-text">Inventory Pro</span>
+    </div>
+
+    <a href="index.html"><span class="material-icons">dashboard</span> Dashboard</a>
+    <a href="products.html"><span class="material-icons">inventory_2</span> Products</a>
+    <a href="stock.html"><span class="material-icons">store</span> Stock</a>
+    <a href="sales.html"><span class="material-icons">point_of_sale</span> Sales</a>
+    <a href="reports.html"><span class="material-icons">bar_chart</span> Reports</a>
+    <a href="help.html"><span class="material-icons">help</span> Help</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+    <h1>Stock Overview</h1>
+
+    <!-- SEARCH + SORT -->
+    <div class="top-bar">
+        <input type="text" id="searchStock" class="search-input" placeholder="Search stock...">
+
+        <select id="sortStock" class="sort-select">
+            <option value="name_asc">Name A→Z</option>
+            <option value="name_desc">Name Z→A</option>
+            <option value="qty_asc">Quantity Low→High</option>
+            <option value="qty_desc">Quantity High→Low</option>
+        </select>
+    </div>
+
+    <!-- STOCK TABLE -->
+    <div class="card">
+        <h3>Stock List</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="stockTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/stock.js"></script>
+
+</body>
+</html>

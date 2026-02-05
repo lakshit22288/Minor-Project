@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports • Inventory Pro</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" class="logo-img">
+        <span class="logo-text">Inventory Pro</span>
+    </div>
+
+    <a href="index.html"><span class="material-icons">dashboard</span> Dashboard</a>
+    <a href="products.html"><span class="material-icons">inventory_2</span> Products</a>
+    <a href="stock.html"><span class="material-icons">store</span> Stock</a>
+    <a href="sales.html"><span class="material-icons">point_of_sale</span> Sales</a>
+    <a href="reports.html"><span class="material-icons">bar_chart</span> Reports</a>
+    <a href="help.html"><span class="material-icons">help</span> Help</a>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <h1>Reports & Analytics</h1>
+
+    <!-- SEARCH BAR (for filtering chart data in future if needed) -->
+    <div class="top-bar">
+        <input type="text" id="searchReports" class="search-input" placeholder="Search report stats (optional)...">
+        
+        <select id="sortReports" class="sort-select">
+            <option value="none">Sort by...</option>
+            <option value="stock_high">Stock High→Low</option>
+            <option value="stock_low">Stock Low→High</option>
+            <option value="sales_high">Sales High→Low</option>
+            <option value="sales_low">Sales Low→High</option>
+        </select>
+    </div>
+
+    <!-- STOCK CHART -->
+    <div class="card">
+        <h3>Stock Levels</h3>
+        <canvas id="stockChart" height="150"></canvas>
+    </div>
+
+    <!-- SALES CHART -->
+    <div class="card">
+        <h3>Sales Overview</h3>
+        <canvas id="salesChart" height="150"></canvas>
+    </div>
+
+</div>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/charts.js"></script>
+
+</body>
+</html>

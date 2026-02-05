@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales • Inventory Pro</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" class="logo-img">
+        <span class="logo-text">Inventory Pro</span>
+    </div>
+
+    <a href="index.html"><span class="material-icons">dashboard</span> Dashboard</a>
+    <a href="products.html"><span class="material-icons">inventory_2</span> Products</a>
+    <a href="stock.html"><span class="material-icons">store</span> Stock</a>
+    <a href="sales.html"><span class="material-icons">point_of_sale</span> Sales</a>
+    <a href="reports.html"><span class="material-icons">bar_chart</span> Reports</a>
+    <a href="help.html"><span class="material-icons">help</span> Help</a>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <h1>Sales Management</h1>
+
+    <!-- SEARCH + SORT BAR -->
+   
+
+    <!-- ADD SALE -->
+    <div class="card">
+        <h3>Add New Sale</h3>
+
+        <select id="saleProduct"></select>
+        <input id="saleQty" type="number" placeholder="Quantity sold">
+
+        <button onclick="addSale()">Add Sale</button>
+    </div>
+
+
+    <!-- SALES HISTORY -->
+    <div class="card">
+        <h3>Sales History</h3>
+
+         <div class="top-bar">
+        <input type="text" id="searchSales" class="search-input" placeholder="Search sales...">
+
+        <select id="sortSales" class="sort-select">
+            <option value="name_asc">Name A→Z</option>
+            <option value="name_desc">Name Z→A</option>
+            <option value="qty_asc">Qty Low→High</option>
+            <option value="qty_desc">Qty High→Low</option>
+            <option value="total_asc">Amount Low→High</option>
+            <option value="total_desc">Amount High→Low</option>
+        </select>
+    </div>
+
+        <!-- CLEAR SALES BUTTON -->
+        <button class="delete-btn" onclick="clearSales()">Clear Sales History</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Invoice</th>
+                </tr>
+            </thead>
+
+            <tbody id="saleTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/pdf.js"></script>
+<script src="../JS/sales.js"></script>
+
+</body>
+</html>
